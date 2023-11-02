@@ -1,0 +1,93 @@
+<!-- 
+
+  ---------- NOTA IMPORTANTE ---------------
+
+  PARA QUE EL PROGRAMA FUNCIONE FAVOR DE EJECUTAR EL ARCHIVO main.py 
+  PARA LEVANTAR EL SERVIDOR
+
+ -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafetería "Cielo Negro"</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./view/styles/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-nav">
+            <a class="navbar-brand" href="#">
+                <img src="./view/images/logo.webp" alt="logo" style="height: 60px; width: 50px;">
+            </a>
+            <span class="navbar-text">
+                Cafetería "Cielo Negro"
+            </span>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="cafeteria-title text-center">Elige la cantidad y tamaño de los cafés</h1>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <form>
+                    <div class="form-group">
+                        <label for="txtChico">Chico:</label>
+                        <input class="form-control" type="number" id="txtChico" name="coffeeSize" placeholder="Cantidad">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtMediano">Mediano:</label>
+                        <input class="form-control" type="number" id="txtMediano" name="coffeeSize" placeholder="Cantidad">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtGrande">Grande:</label>
+                        <input class="form-control" type="number" id="txtGrande" name="coffeeSize" placeholder="Cantidad">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtJumbo">Jumbo:</label>
+                        <input class="form-control" type="number" id="txtJumbo" name="coffeeSize" placeholder="Cantidad">
+                    </div>
+                    <div class="text-center mt-4">
+                        <button class="btn btn-primary" type="button" onclick="calculateCookies()">Calcular Galletas</button>
+                    </div>
+                </form>
+            </div>
+            <label for="table" class="text-center cafeteria-title">Tabla de cafés vendidos</label>
+        </div>
+        
+        <table class="table table-bordered">
+            <thead class="thead-dark text-center">
+                <tr>
+                    <th>Café chico</th>
+                    <th>Café mediano</th>
+                    <th>Café grande</th>
+                    <th>Café jumbo</th>
+                    <th>Total galletas regaladas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        &copy; 2023 Cafetería "Cielo Negro"
+    </footer>
+
+    <script src="./view/scripts.js/controllerCafe.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./view/styles/sweetalert2/sweetalert2.all.min.js"></script>
+</body>
+</html>
